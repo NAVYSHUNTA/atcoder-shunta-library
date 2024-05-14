@@ -2,26 +2,45 @@
 class BIT {
     int size;
     long[] bit;
-    BIT (int n) {
-        this.size = n;
-        this.bit = new long[n + 1];
+    BIT (int size) {
+        this.size = size;
+        this.bit = new long[size + 1];
     }
 
-    // O(logN): インデックス 1 ~ i の和を求めるメソッド
-    public long getSum(int i) {
+    // O(logN): インデックス idx の値に val を加算するメソッド
+    public void add(int idx, long val) {
+        while (idx <= this.size) {
+            this.bit[idx] += val;
+            idx += idx & -idx;
+        }
+    }
+
+    // O(logN): 区間 1 ~ idx の和を求める計算用のメソッド
+    private long sum(int idx) {
         long result = 0L;
-        while (i > 0) {
-            result += this.bit[i];
-            i -= i & -i;
+        while (idx > 0) {
+            result += this.bit[idx];
+            idx -= idx & -idx;
         }
         return result;
     }
 
-    // O(logN): インデックス i の値に x を加算するメソッド
-    public void add(int i, long x) {
-        while (i <= this.size) {
-            this.bit[i] += x;
-            i += i & -i;
+    // O(logN): 区間 1 ~ idx の和を求めるメソッド
+    public long getSum(int idx) {
+        if (idx < 0) {
+            throw new IndexOutOfBoundsException("Index must be a non-negative integer");
         }
+        return sum(idx);
+    }
+
+    // O(logN): 区間 idx1 ~ idx2 の和を求めるメソッド
+    public long getSum(int idx1, int idx2) {
+        if (idx1 <= 0) {
+            throw new IndexOutOfBoundsException("Index must be a positive integer");
+        }
+        if (idx1 > idx2) {
+            throw new IndexOutOfBoundsException("idx1 must be less than or equal to idx2");
+        }
+        return sum(idx2) - sum(idx1 - 1);
     }
 }
