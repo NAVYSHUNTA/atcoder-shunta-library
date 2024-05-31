@@ -2,6 +2,9 @@
 これは競プロ用の自作ライブラリです。
 
 # ライブラリ一覧
+- [データ構造](#data_structureデータ構造)
+- [数学](#math数学)
+
 ## data_structure（データ構造）
 |[Python](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/Python/data_structure)|[Java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/Java/data_structure)|
 |:--|:--|
