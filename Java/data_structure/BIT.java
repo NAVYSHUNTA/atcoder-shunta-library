@@ -27,20 +27,11 @@ class BIT {
 
     // O(logN): 区間 1 ~ idx の和を求めるメソッド
     public long getSum(int idx) {
-        if (idx < 0) {
-            throw new IndexOutOfBoundsException("Index must be a non-negative integer");
-        }
         return sum(idx);
     }
 
     // O(logN): 区間 idx1 ~ idx2 の和を求めるメソッド
     public long getSum(int idx1, int idx2) {
-        if (idx1 <= 0) {
-            throw new IndexOutOfBoundsException("Index must be a positive integer");
-        }
-        if (idx1 > idx2) {
-            throw new IndexOutOfBoundsException("idx1 must be less than or equal to idx2");
-        }
         return sum(idx2) - sum(idx1 - 1);
     }
 }
