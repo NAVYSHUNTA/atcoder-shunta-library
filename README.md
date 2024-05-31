@@ -3,6 +3,6 @@
 
 # ライブラリ一覧
 ## データ構造
-|[Python](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/src/Python/data_structure)|[Java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/src/Java/data_structure)|
+|[Python](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/Python/data_structure)|[Java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/Java/data_structure)|
 |:--|:--|
-|[BIT.py](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/src/Python/data_structure/BIT.py)|[BIT.java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/src/Java/BIT.java)|
+|[BIT.py](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/Python/data_structure/BIT.py)|[BIT.java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/Java/BIT.java)|
