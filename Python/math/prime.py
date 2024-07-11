@@ -2,9 +2,9 @@
 def is_prime(n):
     if n < 2:
         return False
-    val = 2
-    while val ** 2 <= n:
-        if n % val == 0:
+    div = 2
+    while div ** 2 <= n:
+        if n % div == 0:
             return False
-        val += 1
+        div += 1
     return True

@@ -5,12 +5,12 @@ class Prime {
         if (n < 2L) {
             return false;
         }
-        long val = 2L;
-        while (val * val <= n) {
-            if (n % val == 0L) {
+        long div = 2L;
+        while (div * div <= n) {
+            if (n % div == 0L) {
                 return false;
             }
-            val += 1L;
+            div += 1L;
         }
         return true;
     }
