@@ -1,7 +1,7 @@
 // フェニック木 (binary indexed tree: BIT) クラス
 class BIT {
-    int size;
-    long[] bit;
+    private int size;
+    private long[] bit;
 
     BIT (int size) {
         this.size = size;
@@ -28,11 +28,11 @@ class BIT {
 
     // O(log N): 区間 1 ~ idx の和を求めるメソッド
     public long getSum(int idx) {
-        return sum(idx);
+        return this.sum(idx);
     }
 
     // O(log N): 区間 idx1 ~ idx2 の和を求めるメソッド
     public long getSum(int idx1, int idx2) {
-        return sum(idx2) - sum(idx1 - 1);
+        return this.sum(idx2) - this.sum(idx1 - 1);
     }
 }
