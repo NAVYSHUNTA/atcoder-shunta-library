@@ -7,12 +7,12 @@
 - [数学](#math数学)
 
 ## data_structure（データ構造）
-|[Python](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/Python/data_structure)|[Java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/Java/data_structure)|
+|[Python](./Python/data_structure)|[Java](./Java/data_structure)|
 |:--|:--|
-|[BIT.py](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/Python/data_structure/BIT.py)|[BIT.java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/Java/data_structure/BIT.java)|
-|[unionfind.py](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/Python/data_structure/unionfind.py)|[UnionFind.java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/Java/data_structure/UnionFind.java)|
+|[BIT.py](./Python/data_structure/BIT.py)|[BIT.java](./Java/data_structure/BIT.java)|
+|[unionfind.py](./Python/data_structure/unionfind.py)|[UnionFind.java](./Java/data_structure/UnionFind.java)|
 
 ## math（数学）
-|[Python](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/Python/math)|[Java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/tree/main/Java/math)|
+|[Python](./Python/math)|[Java](./Java/math)|
 |:--|:--|
-|[prime.py](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/Python/math/prime.py)|[Prime.java](https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/Java/math/Prime.java)|
+|[prime.py](./Python/math/prime.py)|[Prime.java](./Java/math/Prime.java)|
