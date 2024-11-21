@@ -1,7 +1,7 @@
 // Union-Find 木クラス
 class UnionFind {
     private int[] leader;
-    private int[] groupSize;
+    protected int[] groupSize;
 
     UnionFind(int n) {
         leader = new int[n];
