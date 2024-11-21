@@ -9,10 +9,10 @@ where T: Copy
     }
     let mut div = T::from(2).unwrap();
     while div * div <= n {
-        if n % div == T::from(0).unwrap() {
+        if n % div == T::zero() {
             return false;
         }
-        div = div + T::from(1).unwrap();
+        div = div + T::one();
     }
 
     true
