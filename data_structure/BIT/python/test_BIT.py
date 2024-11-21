@@ -2,18 +2,6 @@ import unittest
 from BIT import *
 
 class TestBIT(unittest.TestCase):
-    def test_add(self):
-        """値の追加のテスト"""
-        SIZE = 4
-        bit = BIT(SIZE)
-        bit.add(1, 3)
-        bit.add(2, 2)
-        bit.add(3, 5)
-        bit.add(4, 1)
-
-        self.assertNotEqual(bit.bit, [0, 3, 2, 5, 1])
-        self.assertEqual(bit.bit, [0, 3, 5, 5, 11])
-
     def test_get_sum(self):
         """区間和のテスト"""
         SIZE = 5

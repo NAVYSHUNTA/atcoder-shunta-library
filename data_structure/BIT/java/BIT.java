@@ -1,7 +1,7 @@
 // フェニック木 (binary indexed tree: BIT) クラス
 class BIT {
     private int size;
-    protected long[] bit;
+    private long[] bit;
 
     BIT (int size) {
         this.size = size;
