@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class BITTest {
     @Test
     public void testAdd() {
+        // 値の追加のテスト
         final int SIZE = 4;
         BIT bit = new BIT(SIZE);
         bit.add(1, 3);
@@ -19,6 +20,7 @@ public class BITTest {
 
     @Test
     public void testGetSum() {
+        // 区間和のテスト
         final int SIZE = 5;
         BIT bit = new BIT(SIZE);
         bit.add(1, 3);

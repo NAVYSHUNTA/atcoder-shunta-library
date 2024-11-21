@@ -4,6 +4,7 @@ import org.junit.Test;
 public class UnionFindTest {
     @Test
     public void testRoot() {
+        // 根を取得するテスト
         final int SIZE = 3;
         UnionFind uf = new UnionFind(SIZE);
         assertEquals(uf.root(0), 0);
@@ -13,6 +14,7 @@ public class UnionFindTest {
 
     @Test
     public void testIsSameFalseCase() {
+        // 異なるグループに属するものに対するテスト
         final int SIZE = 2;
         UnionFind uf = new UnionFind(SIZE);
         assertFalse(uf.isSame(0, 1));
@@ -21,6 +23,7 @@ public class UnionFindTest {
 
     @Test
     public void testIsSameTrueCase() {
+        // 同じグループに属するものに対するテスト
         final int SIZE = 2;
         UnionFind uf = new UnionFind(SIZE);
 
@@ -33,6 +36,7 @@ public class UnionFindTest {
 
     @Test
     public void testUnion() {
+        // グループの併合テスト
         final int SIZE = 3;
         UnionFind uf = new UnionFind(SIZE);
 
@@ -49,6 +53,7 @@ public class UnionFindTest {
 
     @Test
     public void testGroupSize() {
+        // グループのサイズテスト
         final int SIZE = 3;
         UnionFind uf = new UnionFind(SIZE);
 
@@ -69,6 +74,7 @@ public class UnionFindTest {
 
     @Test
     public void testAllMethods() {
+        // 全ての操作を試すテスト
         final int SIZE = 5;
         UnionFind uf = new UnionFind(SIZE);
 
