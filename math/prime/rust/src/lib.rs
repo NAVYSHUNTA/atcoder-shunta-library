@@ -1,13 +1,14 @@
 // O(√n): 素数判定
 pub fn is_prime<T>(n: T) -> bool
-where T: Copy
-    + num::Integer
-    + num::NumCast
+where T: Copy + num::Integer
 {
-    if n < T::from(2).unwrap() {
+    let two = T::one() + T::one();
+
+    if n < two {
         return false;
     }
-    let mut div = T::from(2).unwrap();
+
+    let mut div = two;
     while div * div <= n {
         if n % div == T::zero() {
             return false;
