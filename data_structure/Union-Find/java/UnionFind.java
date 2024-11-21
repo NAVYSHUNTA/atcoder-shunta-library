@@ -1,7 +1,8 @@
 // Union-Find 木クラス
 class UnionFind {
     private int[] leader;
-    protected int[] groupSize;
+    private int[] groupSize;
+    private int groupCount;
 
     UnionFind(int n) {
         leader = new int[n];
@@ -9,6 +10,7 @@ class UnionFind {
         for (int i = 0; i < n; i++) {
             leader[i] = -1;
             groupSize[i] = 1;
+            groupCount = n;
         }
     }
 
@@ -36,10 +38,21 @@ class UnionFind {
 
         this.leader[ly] = lx;
         this.groupSize[lx] += this.groupSize[ly];
+        this.groupCount -= 1;
     }
 
     // O(log N): x と y が同じグループに属するかを返すメソッド
     boolean isSame(int x, int y) {
         return this.root(x) == this.root(y);
+    }
+
+    // O(log N): v が属するグループのサイズを返すメソッド
+    int getGroupSize(int v) {
+        return this.groupSize[this.root(v)];
+    }
+
+    // O(1): 連結成分の個数を返すメソッド
+    int getGroupCount() {
+        return this.groupCount;
     }
 }
