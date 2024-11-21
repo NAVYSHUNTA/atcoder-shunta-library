@@ -10,6 +10,7 @@ class TestBIT(unittest.TestCase):
         bit.add(2, 2)
         bit.add(3, 5)
         bit.add(4, 1)
+
         self.assertNotEqual(bit.bit, [0, 3, 2, 5, 1])
         self.assertEqual(bit.bit, [0, 3, 5, 5, 11])
 

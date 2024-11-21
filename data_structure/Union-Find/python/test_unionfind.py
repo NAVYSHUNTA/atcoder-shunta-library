@@ -21,6 +21,7 @@ class TestUnionFind(unittest.TestCase):
         """同じグループに属するものに対するテスト"""
         SIZE = 2
         uf = UnionFind(SIZE)
+
         uf.union(0, 1)
         self.assertTrue(uf.is_same(0, 0))
         self.assertTrue(uf.is_same(0, 1))
@@ -31,10 +32,12 @@ class TestUnionFind(unittest.TestCase):
         """グループの併合テスト"""
         SIZE = 3
         uf = UnionFind(SIZE)
+
         uf.union(0, 1)
         self.assertTrue(uf.is_same(0, 1))
         self.assertFalse(uf.is_same(0, 2))
         self.assertFalse(uf.is_same(1, 2))
+
         uf.union(2, 1)
         self.assertTrue(uf.is_same(0, 1))
         self.assertTrue(uf.is_same(0, 2))
@@ -44,13 +47,16 @@ class TestUnionFind(unittest.TestCase):
         """グループのサイズテスト"""
         SIZE = 3
         uf = UnionFind(SIZE)
+
         self.assertEqual(uf.group_size[uf.root(0)], 1)
         self.assertEqual(uf.group_size[uf.root(1)], 1)
         self.assertEqual(uf.group_size[uf.root(2)], 1)
+
         uf.union(0, 1)
         self.assertEqual(uf.group_size[uf.root(0)], 2)
         self.assertEqual(uf.group_size[uf.root(1)], 2)
         self.assertEqual(uf.group_size[uf.root(2)], 1)
+
         uf.union(2, 1)
         self.assertEqual(uf.group_size[uf.root(0)], 3)
         self.assertEqual(uf.group_size[uf.root(1)], 3)
@@ -60,13 +66,16 @@ class TestUnionFind(unittest.TestCase):
         """全ての操作を試すテスト"""
         SIZE = 5
         uf = UnionFind(SIZE)
+
         uf.union(0, 1)
         uf.union(2, 3)
         uf.union(1, 2)
+
         self.assertTrue(uf.is_same(0, 1))
         self.assertTrue(uf.is_same(0, 2))
         self.assertTrue(uf.is_same(0, 3))
         self.assertFalse(uf.is_same(0, 4))
+
         self.assertEqual(uf.group_size[uf.root(0)], 4)
         self.assertEqual(uf.group_size[uf.root(1)], 4)
         self.assertEqual(uf.group_size[uf.root(2)], 4)
