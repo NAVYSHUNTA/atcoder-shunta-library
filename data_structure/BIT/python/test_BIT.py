@@ -12,15 +12,15 @@ class TestBIT(unittest.TestCase):
         bit.add(4, 1)
         bit.add(5, 5)
 
-        self.assertEqual(bit.get_sum(1), 3)
-        self.assertEqual(bit.get_sum(2), 5)
-        self.assertEqual(bit.get_sum(3), 10)
-        self.assertEqual(bit.get_sum(4), 11)
-        self.assertEqual(bit.get_sum(5), 16)
+        self.assertEqual(3, bit.get_sum(1))
+        self.assertEqual(5, bit.get_sum(2))
+        self.assertEqual(10, bit.get_sum(3))
+        self.assertEqual(11, bit.get_sum(4))
+        self.assertEqual(16, bit.get_sum(5))
 
-        self.assertEqual(bit.get_sum(1, 5), 16)
-        self.assertEqual(bit.get_sum(2, 4), 8)
-        self.assertEqual(bit.get_sum(3, 3), 5)
+        self.assertEqual(16, bit.get_sum(1, 5))
+        self.assertEqual(8, bit.get_sum(2, 4))
+        self.assertEqual(5, bit.get_sum(3, 3))
 
 if __name__ == "__main__":
     unittest.main()
