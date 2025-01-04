@@ -41,7 +41,7 @@ class TestPrime(unittest.TestCase):
         self.assertEqual(1, comb.get_comb(n, n))
 
     def test_calc_comb_with_mod_998244353_large(self):
-        """大きい数の組合せの計算の余りテスト"""
+        """大きい数に対する組合せの計算の余りテスト"""
         n = 10 ** 6
         mod = 998244353
         comb = Comb(n, mod)
@@ -54,7 +54,7 @@ class TestPrime(unittest.TestCase):
         self.assertEqual(1, comb.get_comb(n, n))
 
     def test_calc_comb_with_mod_1000000007_large(self):
-        """大きい数の組合せの計算の余りテスト"""
+        """大きい数に対する組合せの計算の余りテスト"""
         n = 10 ** 6
         mod = 10 ** 9 + 7
         comb = Comb(n, mod)

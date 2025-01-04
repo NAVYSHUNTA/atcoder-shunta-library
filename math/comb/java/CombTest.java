@@ -48,6 +48,7 @@ public class CombTest {
 
     @Test
     public void testCalcCombWithMod998244353Large() {
+        // 大きい数に対する組合せの計算の余りテスト
         int n = 1000000;
         int mod = 998244353;
         Comb comb = new Comb(n, mod);
@@ -62,6 +63,7 @@ public class CombTest {
 
     @Test
     public void testCalcCombWithMod1000000007Large() {
+        // 大きい数に対する組合せの計算の余りテスト
         int n = 1000000;
         int mod = 1000000007;
         Comb comb = new Comb(n, mod);
