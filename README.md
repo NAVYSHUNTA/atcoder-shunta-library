@@ -18,3 +18,4 @@
 |名称|java|python|rust|
 |:--|:--|:--|:--|
 |[prime](./math/prime)|[java](./math/prime/java/Prime.java)|[python](./math/prime/python/prime.py)|[rust](./math/prime/rust/src/lib.rs)|
+|[comb](./math/comb)||[python](./math/prime/python/comb.py)||
