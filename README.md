@@ -9,13 +9,13 @@
 # ライブラリ一覧
 ## data_structure（データ構造）
 
-|名称|java|python|rust|
+|名称|Java|Python|Rust|
 |:--|:--|:--|:--|
-|[BIT](./data_structure/BIT/)|[java](./data_structure/BIT/java/BIT.java)|[python](./data_structure/BIT/python/BIT.py)||
-|[Union-Find](./data_structure/Union-Find)|[java](./data_structure/Union-Find/java/UnionFind.java)|[python](./data_structure/Union-Find/python/unionfind.py)||
+|[BIT](./data_structure/BIT/)|[Java](./data_structure/BIT/java/BIT.java)|[Python](./data_structure/BIT/python/BIT.py)||
+|[Union-Find](./data_structure/Union-Find)|[Java](./data_structure/Union-Find/java/UnionFind.java)|[Python](./data_structure/Union-Find/python/unionfind.py)||
 
 ## math（数学）
-|名称|java|python|rust|
+|名称|Java|Python|Rust|
 |:--|:--|:--|:--|
-|[prime](./math/prime)|[java](./math/prime/java/Prime.java)|[python](./math/prime/python/prime.py)|[rust](./math/prime/rust/src/lib.rs)|
-|[comb](./math/comb)|[java](./math/comb/java/Comb.java)|[python](./math/comb/python/comb.py)|[rust](./math/comb/rust/src/lib.rs)|
+|[prime](./math/prime)|[Java](./math/prime/java/Prime.java)|[Python](./math/prime/python/prime.py)|[Rust](./math/prime/rust/src/lib.rs)|
+|[comb](./math/comb)|[Java](./math/comb/java/Comb.java)|[Python](./math/comb/python/comb.py)|[Rust](./math/comb/rust/src/lib.rs)|
