@@ -7,20 +7,20 @@ public class BITTest {
         // 区間和のテスト
         final int SIZE = 5;
         BIT bit = new BIT(SIZE);
-        bit.add(1, 3);
-        bit.add(2, 2);
-        bit.add(3, 5);
-        bit.add(4, 1);
-        bit.add(5, 5);
+        bit.add(0, 3);
+        bit.add(1, 2);
+        bit.add(2, 5);
+        bit.add(3, 1);
+        bit.add(4, 5);
 
-        assertEquals(3, bit.getSum(1));
-        assertEquals(5, bit.getSum(2));
-        assertEquals(10, bit.getSum(3));
-        assertEquals(11, bit.getSum(4));
-        assertEquals(16, bit.getSum(5));
+        assertEquals(3, bit.getSum(0));
+        assertEquals(5, bit.getSum(1));
+        assertEquals(10, bit.getSum(2));
+        assertEquals(11, bit.getSum(3));
+        assertEquals(16, bit.getSum(4));
 
-        assertEquals(16, bit.getSum(1, 5));
-        assertEquals(8, bit.getSum(2, 4));
-        assertEquals(5, bit.getSum(3, 3));
+        assertEquals(16, bit.getSum(0, 4));
+        assertEquals(8, bit.getSum(1, 3));
+        assertEquals(5, bit.getSum(2, 2));
     }
 }
