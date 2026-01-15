@@ -15,14 +15,21 @@ class UnionFind {
     }
 
     // O(log N): v の根を返すメソッド
+    // 経路圧縮ありなら、ならし計算量 O(α(N)): v の根を返すメソッド
     int root(int v) {
-        while (this.leader[v] != -1) {
-            v = this.leader[v];
+        if (this.leader[v] == -1) {
+            return v;
+        } else {
+            // 経路圧縮を行わない場合：UnionFind の各操作は O(log N)
+            // return this.root(this.leader[v]);
+
+            // 経路圧縮を行う場合：UnionFind の各操作は、ならし計算量で O(α(N)) ここで α はアッカーマン関数の逆関数
+            return this.leader[v] = this.root(this.leader[v]);
         }
-        return v;
     }
 
     // O(log N): x と y が属するグループを併合するメソッド
+    // 経路圧縮ありなら、ならし計算量 O(α(N)): x と y が属するグループを併合するメソッド
     void union(int x, int y) {
         int lx = this.root(x);
         int ly = this.root(y);
@@ -42,11 +49,13 @@ class UnionFind {
     }
 
     // O(log N): x と y が同じグループに属するかを返すメソッド
+    // 経路圧縮ありなら、ならし計算量 O(α(N)): x と y が同じグループに属するかを返すメソッド
     boolean isSame(int x, int y) {
         return this.root(x) == this.root(y);
     }
 
     // O(log N): v が属するグループのサイズを返すメソッド
+    // 経路圧縮ありなら、ならし計算量 O(α(N)): v が属するグループのサイズを返すメソッド
     int getGroupSize(int v) {
         return this.groupSize[this.root(v)];
     }
