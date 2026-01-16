@@ -4,7 +4,6 @@ use num_traits::{ToPrimitive, One};
 // 組合せ構造体
 #[allow(dead_code)]
 pub struct Comb {
-    is_with_mod_val: bool,
     mod_val: Option<i64>,
     f: Vec<BigInt>,
     fac: Vec<i64>,
@@ -20,7 +19,6 @@ impl Comb {
             f[i] = f[i - 1].clone() * i;
         }
         Comb {
-            is_with_mod_val: false,
             mod_val: None,
             f,
             fac: vec![],
@@ -41,7 +39,6 @@ impl Comb {
             fac_inv[i] = ((fac_inv[i - 1] * inv[i]) % mod_val + mod_val) % mod_val;
         }
         Comb {
-            is_with_mod_val: true,
             mod_val: Some(mod_val),
             f: vec![],
             fac,
@@ -54,10 +51,13 @@ impl Comb {
     // O(1): コンストラクタで mod_val を指定していないかつ n が小さい場合
     // O(1): コンストラクタで mod_val を指定している場合（n の値によらない）
     pub fn get_comb(&self, n: usize, r: usize) -> i64 {
-        if self.is_with_mod_val {
-            (((self.fac[n] * self.fac_inv[r]) % self.mod_val.unwrap()) * self.fac_inv[n - r]) % self.mod_val.unwrap()
-        } else {
-            (self.f[n].clone() / (self.f[r].clone() * self.f[n - r].clone())).to_i64().unwrap()
+        match self.mod_val {
+            Some(mod_val) => {
+                ((self.fac[n] * self.fac_inv[r]) % mod_val * self.fac_inv[n - r]) % mod_val
+            }
+            None => {
+                (self.f[n].clone() / (self.f[r].clone() * self.f[n - r].clone())).to_i64().unwrap()
+            }
         }
     }
 }

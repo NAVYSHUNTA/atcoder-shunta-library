@@ -2,8 +2,7 @@ import java.math.BigDecimal;
 
 // 組合せクラス
 class Comb {
-    private boolean isWithMod = false;
-    private long mod;
+    private long mod = 0L;
     private BigDecimal[] f;
     private long[] fac;
     private long[] facInv;
@@ -20,7 +19,6 @@ class Comb {
 
     // O(n): コンストラクタ
     Comb(int n, int mod) {
-        this.isWithMod = true;
         this.mod = mod;
 
         this.fac = new long[n + 1];
@@ -45,7 +43,7 @@ class Comb {
     // O(1): コンストラクタで mod を指定していないかつ n が小さい場合
     // O(1): コンストラクタで mod を指定している場合（n の値によらない）
     public long getComb(int n, int r) {
-        if (this.isWithMod) {
+        if (mod >= 1L) {
             return (((this.fac[n] * this.facInv[r]) % this.mod) * this.facInv[n - r]) % this.mod;
         } else {
             return this.f[n].divide(this.f[r].multiply(this.f[n - r])).longValue();
