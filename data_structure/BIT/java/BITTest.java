@@ -23,4 +23,24 @@ public class BITTest {
         assertEquals(8, bit.getSum(1, 3));
         assertEquals(5, bit.getSum(2, 2));
     }
+
+    @Test
+    public void testGetSumWithNegativeValues() {
+        // 負数を含む区間和のテスト
+        final int SIZE = 4;
+        BIT bit = new BIT(SIZE);
+        bit.add(3, 16);
+        bit.add(0, 4);
+        bit.add(2, -2);
+        bit.add(1, -8);
+
+        assertEquals(4, bit.getSum(0));
+        assertEquals(-4, bit.getSum(1));
+        assertEquals(-6, bit.getSum(2));
+        assertEquals(10, bit.getSum(3));
+
+        assertEquals(-6, bit.getSum(0, 2));
+        assertEquals(6, bit.getSum(1, 3));
+        assertEquals(-2, bit.getSum(2, 2));
+    }
 }
