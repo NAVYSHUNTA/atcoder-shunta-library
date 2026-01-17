@@ -7,6 +7,7 @@ public class UnionFindTest {
         // 根を取得するテスト
         final int SIZE = 3;
         UnionFind uf = new UnionFind(SIZE);
+
         assertEquals(0, uf.root(0));
         assertEquals(1, uf.root(1));
         assertEquals(2, uf.root(2));
@@ -17,6 +18,7 @@ public class UnionFindTest {
         // 異なるグループに属するものに対するテスト
         final int SIZE = 2;
         UnionFind uf = new UnionFind(SIZE);
+
         assertFalse(uf.isSame(0, 1));
         assertFalse(uf.isSame(1, 0));
     }
@@ -77,6 +79,7 @@ public class UnionFindTest {
         // 連結成分の個数テスト
         final int SIZE = 3;
         UnionFind uf = new UnionFind(SIZE);
+
         assertEquals(3, uf.getGroupCount());
 
         uf.union(0, 1);
@@ -94,6 +97,7 @@ public class UnionFindTest {
         // 全ての操作を試すテスト
         final int SIZE = 5;
         UnionFind uf = new UnionFind(SIZE);
+
         assertEquals(5, uf.getGroupCount());
 
         uf.union(0, 1);
