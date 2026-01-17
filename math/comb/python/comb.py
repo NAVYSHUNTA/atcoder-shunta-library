@@ -1,25 +1,21 @@
-from typing import Optional
-
 # 組合せクラス
 class Comb:
     __fac: list[int]
     __fac_inv: list[int]
     __inv: list[int]
-    __mod: Optional[int]
+    __mod: int | None
 
     # O(n): コンストラクタ
-    def __init__(self, n: int, mod: Optional[int] = None) -> None:
+    def __init__(self, n: int, mod: int | None = None) -> None:
         self.__mod = mod
+        self.__fac = [1] * (n + 1)
+        self.__fac_inv = [1] * (n + 1)
+        self.__inv = [1] * (n + 1)
 
         if mod is None:
-            self.__fac = [1] * (n + 1)
             for i in range(2, n + 1):
                 self.__fac[i] = self.__fac[i - 1] * i
         else:
-            self.__fac = [1] * (n + 1)
-            self.__fac_inv = [1] * (n + 1)
-            self.__inv = [1] * (n + 1)
-
             for i in range(2, n + 1):
                 self.__fac[i] = (self.__fac[i - 1] * i) % mod
                 self.__inv[i] = (-self.__inv[mod % i] * (mod // i)) % mod
