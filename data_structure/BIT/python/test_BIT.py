@@ -2,10 +2,10 @@ import unittest
 from BIT import BIT
 
 class TestBIT(unittest.TestCase):
-    def test_get_sum(self):
+    def test_get_sum(self) -> None:
         """区間和のテスト"""
-        SIZE = 5
-        bit = BIT(SIZE)
+        SIZE: int = 5
+        bit: BIT = BIT(SIZE)
         bit.add(0, 3)
         bit.add(1, 2)
         bit.add(2, 5)
