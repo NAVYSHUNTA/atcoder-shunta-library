@@ -1,5 +1,5 @@
 import unittest
-from unionfind import *
+from unionfind import UnionFind
 
 class TestUnionFind(unittest.TestCase):
     def test_root(self):

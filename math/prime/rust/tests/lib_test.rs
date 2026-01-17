@@ -1,4 +1,4 @@
-use rust::*;
+use rust::is_prime;
 
 #[test]
 fn test_is_prime() {

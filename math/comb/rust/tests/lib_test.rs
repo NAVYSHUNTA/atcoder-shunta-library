@@ -1,4 +1,4 @@
-use rust::*;
+use rust::Comb;
 
 #[test]
 fn test_calc_comb() {

@@ -1,5 +1,5 @@
 import unittest
-from BIT import *
+from BIT import BIT
 
 class TestBIT(unittest.TestCase):
     def test_get_sum(self):
