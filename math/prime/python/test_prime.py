@@ -1,3 +1,6 @@
+# Shunta の自作ライブラリ
+# https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/math/prime/python/test_prime.py
+
 import unittest
 from prime import is_prime
 

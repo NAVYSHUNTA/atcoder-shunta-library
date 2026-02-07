@@ -1,3 +1,6 @@
+# Shunta の自作ライブラリ
+# https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/math/comb/python/test_comb.py
+
 import unittest
 from comb import Comb
 

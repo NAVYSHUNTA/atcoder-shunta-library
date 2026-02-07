@@ -1,3 +1,6 @@
+# Shunta の自作ライブラリ
+# https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/data_structure/BIT/python/test_BIT.py
+
 import unittest
 from BIT import BIT
 

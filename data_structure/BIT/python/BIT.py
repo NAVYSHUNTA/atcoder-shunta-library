@@ -1,3 +1,6 @@
+# Shunta の自作ライブラリ
+# https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/data_structure/BIT/python/BIT.py
+
 # フェニック木 (binary indexed tree: BIT) クラス
 class BIT:
     __size: int

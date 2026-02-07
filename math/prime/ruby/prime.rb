@@ -1,3 +1,6 @@
+# Shunta の自作ライブラリ
+# https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/math/prime/ruby/prime.rb
+
 # O(√n): 素数判定
 def prime?(n)
   if n < 2

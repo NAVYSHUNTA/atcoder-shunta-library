@@ -1,3 +1,6 @@
+# Shunta の自作ライブラリ
+# https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/math/prime/ruby/test_prime.rb
+
 require 'minitest/autorun'
 require_relative 'prime'
 

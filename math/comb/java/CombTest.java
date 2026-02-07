@@ -1,3 +1,6 @@
+// Shunta の自作ライブラリ
+// https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/math/comb/java/CombTest.java
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 

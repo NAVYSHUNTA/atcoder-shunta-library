@@ -1,3 +1,6 @@
+// Shunta の自作ライブラリ
+// https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/data_structure/BIT/java/BIT.java
+
 // フェニック木 (binary indexed tree: BIT) クラス
 class BIT {
     private int size;

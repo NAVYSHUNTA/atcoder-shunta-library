@@ -1,3 +1,6 @@
+// Shunta の自作ライブラリ
+// https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/math/prime/java/PrimeTest.java
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 

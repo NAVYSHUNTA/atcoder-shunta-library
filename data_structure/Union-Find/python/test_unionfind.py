@@ -1,3 +1,6 @@
+# Shunta の自作ライブラリ
+# https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/data_structure/Union-Find/python/test_unionfind.py
+
 import unittest
 from unionfind import UnionFind
 

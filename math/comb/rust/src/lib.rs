@@ -1,3 +1,6 @@
+// Shunta の自作ライブラリ
+// https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/math/comb/rust/src/lib.rs
+
 use num_bigint::BigInt;
 use num_traits::{ToPrimitive, One};
 

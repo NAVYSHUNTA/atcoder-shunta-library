@@ -1,3 +1,6 @@
+// Shunta の自作ライブラリ
+// https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/data_structure/Union-Find/java/UnionFind.java
+
 // Union-Find 木クラス
 class UnionFind {
     private int[] leader;

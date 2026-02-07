@@ -1,3 +1,6 @@
+// Shunta の自作ライブラリ
+// https://github.com/NAVYSHUNTA/atcoder-shunta-library/blob/main/math/comb/java/Comb.java
+
 import java.math.BigDecimal;
 
 // 組合せクラス
