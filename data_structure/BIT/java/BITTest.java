@@ -16,15 +16,15 @@ public class BITTest {
         bit.add(3, 1);
         bit.add(4, 5);
 
-        assertEquals(3, bit.getSum(0));
-        assertEquals(5, bit.getSum(1));
-        assertEquals(10, bit.getSum(2));
-        assertEquals(11, bit.getSum(3));
-        assertEquals(16, bit.getSum(4));
+        assertEquals(3, bit.getSum(1));
+        assertEquals(5, bit.getSum(2));
+        assertEquals(10, bit.getSum(3));
+        assertEquals(11, bit.getSum(4));
+        assertEquals(16, bit.getSum(5));
 
-        assertEquals(16, bit.getSum(0, 4));
-        assertEquals(8, bit.getSum(1, 3));
-        assertEquals(5, bit.getSum(2, 2));
+        assertEquals(16, bit.getSum(0, 5));
+        assertEquals(8, bit.getSum(1, 4));
+        assertEquals(5, bit.getSum(2, 3));
     }
 
     @Test
@@ -37,13 +37,13 @@ public class BITTest {
         bit.add(2, -2);
         bit.add(1, -8);
 
-        assertEquals(4, bit.getSum(0));
-        assertEquals(-4, bit.getSum(1));
-        assertEquals(-6, bit.getSum(2));
-        assertEquals(10, bit.getSum(3));
+        assertEquals(4, bit.getSum(1));
+        assertEquals(-4, bit.getSum(2));
+        assertEquals(-6, bit.getSum(3));
+        assertEquals(10, bit.getSum(4));
 
-        assertEquals(-6, bit.getSum(0, 2));
-        assertEquals(6, bit.getSum(1, 3));
-        assertEquals(-2, bit.getSum(2, 2));
+        assertEquals(-6, bit.getSum(0, 3));
+        assertEquals(6, bit.getSum(1, 4));
+        assertEquals(-2, bit.getSum(2, 3));
     }
 }

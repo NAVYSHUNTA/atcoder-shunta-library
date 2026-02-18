@@ -20,24 +20,23 @@ class BIT {
         }
     }
 
-    // O(log N): 区間 [0, idx] の区間和を求める計算用のメソッド
-    private long sum(int idx) {
+    // O(log N): 半開区間 [0, right) の区間和を求める計算用のメソッド
+    private long sum(int right) {
         long result = 0L;
-        idx += 1;
-        while (idx > 0) {
-            result += this.bit[idx];
-            idx -= idx & -idx;
+        while (right > 0) {
+            result += this.bit[right];
+            right -= right & -right;
         }
         return result;
     }
 
-    // O(log N): 区間 [0, idx] の区間和を求めるメソッド
-    public long getSum(int idx) {
-        return this.sum(idx);
+    // O(log N): 半開区間 [0, right) の区間和を求めるメソッド
+    public long getSum(int right) {
+        return this.sum(right);
     }
 
-    // O(log N): 区間 [idx1, idx2] の区間和を求めるメソッド
-    public long getSum(int idx1, int idx2) {
-        return this.sum(idx2) - this.sum(idx1 - 1);
+    // O(log N): 半開区間 [left, right) の区間和を求めるメソッド
+    public long getSum(int left, int right) {
+        return this.sum(right) - this.sum(left);
     }
 }
