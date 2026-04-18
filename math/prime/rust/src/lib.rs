@@ -3,20 +3,28 @@
 
 // O(√n): 素数判定
 pub fn is_prime<T>(n: T) -> bool
-where T: Copy + num::Integer
+where T: Copy + num::Integer + std::ops::AddAssign
 {
-    let two = T::one() + T::one();
+    let one = T::one();
+    let two = one + one;
 
     if n < two {
         return false;
     }
+    if n == two {
+        return true;
+    }
+    if n.is_even() {
+        return false;
+    }
 
-    let mut div = two;
+    let _skip_even = two;
+    let mut div = two + one;
     while div * div <= n {
-        if n % div == T::zero() {
+        if (n % div).is_zero() {
             return false;
         }
-        div = div + T::one();
+        div += _skip_even;
     }
 
     true

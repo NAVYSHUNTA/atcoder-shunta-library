@@ -3,15 +3,18 @@
 
 # O(√n): 素数判定
 def prime?(n)
-  if n < 2
-    return false
-  end
-  div = 2
+  return false if n < 2
+  return true if n == 2
+  return false if n.even?
+
+  _skip_even = 2
+  div = 3
   while div * div <= n
     if n % div == 0
       return false
     end
-    div += 1
+    div += _skip_even
   end
-  return true
+
+  true
 end

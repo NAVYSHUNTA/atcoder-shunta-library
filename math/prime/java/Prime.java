@@ -8,12 +8,20 @@ class Prime {
         if (n < 2L) {
             return false;
         }
-        long div = 2L;
+        if (n == 2L) {
+            return true;
+        }
+        if (n % 2 == 0) {
+            return false;
+        }
+
+        final long SKIP_EVEN = 2L;
+        long div = 3L;
         while (div * div <= n) {
             if (n % div == 0L) {
                 return false;
             }
-            div += 1L;
+            div += SKIP_EVEN;
         }
         return true;
     }

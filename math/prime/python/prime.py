@@ -5,9 +5,15 @@
 def is_prime(n: int) -> bool:
     if n < 2:
         return False
-    div: int = 2
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+
+    _SKIP_EVEN: int = 2
+    div: int = 3
     while div * div <= n:
         if n % div == 0:
             return False
-        div += 1
+        div += _SKIP_EVEN
     return True
