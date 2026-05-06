@@ -26,7 +26,7 @@ class UnionFind {
             // 経路圧縮を行わない場合：UnionFind の各操作は O(log N)
             // return this.root(this.leader[v]);
 
-            // 経路圧縮を行う場合：UnionFind の各操作は、ならし計算量で O(α(N)) ここで α はアッカーマン関数の逆関数
+            // 経路圧縮を行う場合：UnionFind の各操作は、ならし計算量で O(α(N)) ここで α は逆アッカーマン関数
             return this.leader[v] = this.root(this.leader[v]);
         }
     }
