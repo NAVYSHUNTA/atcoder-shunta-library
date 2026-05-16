@@ -53,7 +53,14 @@ impl Comb {
     // nCr の値を求める関数
     // O(1): コンストラクタで mod_val を指定していないかつ n が小さい場合
     // O(1): コンストラクタで mod_val を指定している場合（n の値によらない）
-    pub fn get_comb(&self, n: usize, r: usize) -> i64 {
+    pub fn get_comb(&self, n: i64, r: i64) -> i64 {
+        if n < r || n.min(r) < 0 {
+            return 0;
+        }
+
+        let n = n as usize;
+        let r = r as usize;
+
         match self.mod_val {
             Some(mod_val) => {
                 ((self.fac[n] * self.fac_inv[r]) % mod_val * self.fac_inv[n - r]) % mod_val

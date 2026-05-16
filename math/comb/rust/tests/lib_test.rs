@@ -4,10 +4,22 @@
 use rust::Comb;
 
 #[test]
+fn test_get_comb_invalid_cases_returns_zero() {
+    // 不正な数値に対するテスト
+    let n: i64 = 40;
+    let mod_val: i64 = 998244353;
+    let comb = Comb::new(n as usize);
+    let mod_comb = Comb::new_with_mod(n as usize, mod_val);
+    assert_eq!(0_i64, comb.get_comb(n, -1));
+    assert_eq!(0_i64, mod_comb.get_comb(n, -2));
+}
+
+#[test]
 fn test_calc_comb() {
     // 組合せの計算テスト
-    let n = 40;
-    let comb = Comb::new(n);
+    let n: i64 = 40;
+    let comb = Comb::new(n as usize);
+    assert_eq!(1_i64, comb.get_comb(0, 0));
     assert_eq!(1_i64, comb.get_comb(n, 0));
     assert_eq!(40_i64, comb.get_comb(n, 1));
     assert_eq!(131282408400_i64, comb.get_comb(n, n / 2 - 1));
@@ -20,9 +32,10 @@ fn test_calc_comb() {
 #[test]
 fn test_calc_comb_with_mod_998244353() {
     // 組合せの計算の余りテスト
-    let n = 40;
-    let mod_val = 998244353;
-    let comb = Comb::new_with_mod(n, mod_val);
+    let n: i64 = 40;
+    let mod_val: i64 = 998244353;
+    let comb = Comb::new_with_mod(n as usize, mod_val);
+    assert_eq!(1_i64, comb.get_comb(0, 0));
     assert_eq!(1_i64, comb.get_comb(n, 0));
     assert_eq!(40_i64, comb.get_comb(n, 1));
     assert_eq!(512398157_i64, comb.get_comb(n, n / 2 - 1));
@@ -35,9 +48,9 @@ fn test_calc_comb_with_mod_998244353() {
 #[test]
 fn test_calc_comb_with_mod_1000000007() {
     // 組合せの計算の余りテスト
-    let n = 40;
-    let mod_val = 1000000007;
-    let comb = Comb::new_with_mod(n, mod_val);
+    let n: i64 = 40;
+    let mod_val: i64 = 1000000007;
+    let comb = Comb::new_with_mod(n as usize, mod_val);
     assert_eq!(1_i64, comb.get_comb(n, 0));
     assert_eq!(40_i64, comb.get_comb(n, 1));
     assert_eq!(282407483_i64, comb.get_comb(n, n / 2 - 1));
@@ -50,9 +63,9 @@ fn test_calc_comb_with_mod_1000000007() {
 #[test]
 fn test_calc_comb_with_mod_998244353_large() {
     // 大きい数に対する組合せの計算の余りテスト
-    let n = 1000000;
-    let mod_val = 998244353;
-    let comb = Comb::new_with_mod(n, mod_val);
+    let n: i64 = 1000000;
+    let mod_val: i64 = 998244353;
+    let comb = Comb::new_with_mod(n as usize, mod_val);
     assert_eq!(1_i64, comb.get_comb(n, 0));
     assert_eq!(1000000_i64, comb.get_comb(n, 1));
     assert_eq!(779944411_i64, comb.get_comb(n, n / 2 - 1));
@@ -65,9 +78,9 @@ fn test_calc_comb_with_mod_998244353_large() {
 #[test]
 fn test_calc_comb_with_mod_1000000007_large() {
     // 大きい数に対する組合せの計算の余りテスト
-    let n = 1000000;
-    let mod_val = 1000000007;
-    let comb = Comb::new_with_mod(n, mod_val);
+    let n: i64 = 1000000;
+    let mod_val: i64 = 1000000007;
+    let comb = Comb::new_with_mod(n as usize, mod_val);
     assert_eq!(1_i64, comb.get_comb(n, 0));
     assert_eq!(1000000_i64, comb.get_comb(n, 1));
     assert_eq!(782751210_i64, comb.get_comb(n, n / 2 - 1));
