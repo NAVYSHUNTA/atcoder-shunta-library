@@ -12,6 +12,14 @@ fn test_get_comb_invalid_cases_returns_zero() {
     let mod_comb = Comb::new_with_mod(n as usize, mod_val);
     assert_eq!(0_i64, comb.get_comb(n, -1));
     assert_eq!(0_i64, mod_comb.get_comb(n, -2));
+    assert_eq!(0_i64, comb.get_comb(-3, -2));
+    assert_eq!(0_i64, mod_comb.get_comb(-5, -7));
+    assert_eq!(0_i64, comb.get_comb(-10, n));
+    assert_eq!(0_i64, mod_comb.get_comb(-8, n));
+    assert_eq!(0_i64, comb.get_comb(-5, 0));
+    assert_eq!(0_i64, mod_comb.get_comb(-38, 0));
+    assert_eq!(0_i64, comb.get_comb(0, -10));
+    assert_eq!(0_i64, mod_comb.get_comb(0, 29));
 }
 
 #[test]
