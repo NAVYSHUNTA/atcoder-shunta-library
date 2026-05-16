@@ -6,10 +6,30 @@ import org.junit.Test;
 
 public class CombTest {
     @Test
+    public void testGetCombInvalidCasesReturnsZero() {
+        // 不正な数値に対するテスト
+        int n = 40;
+        int mod = 998244353;
+        Comb comb = new Comb(n);
+        Comb modComb = new Comb(n, mod);
+        assertEquals(0L, comb.getComb(n, -1));
+        assertEquals(0L, modComb.getComb(n, -2));
+        assertEquals(0L, comb.getComb(-3, -2));
+        assertEquals(0L, modComb.getComb(-5, -7));
+        assertEquals(0L, comb.getComb(-10, n));
+        assertEquals(0L, modComb.getComb(-8, n));
+        assertEquals(0L, comb.getComb(-5, 0));
+        assertEquals(0L, modComb.getComb(-38, 0));
+        assertEquals(0L, comb.getComb(0, -10));
+        assertEquals(0L, modComb.getComb(0, 29));
+    }
+
+    @Test
     public void testCalcComb() {
         // 組合せの計算テスト
         int n = 40;
         Comb comb = new Comb(n);
+        assertEquals(1L, comb.getComb(0, 0));
         assertEquals(1L, comb.getComb(n, 0));
         assertEquals(40L, comb.getComb(n, 1));
         assertEquals(131282408400L, comb.getComb(n, n / 2 - 1));
@@ -25,6 +45,7 @@ public class CombTest {
         int n = 40;
         int mod = 998244353;
         Comb comb = new Comb(n, mod);
+        assertEquals(1L, comb.getComb(0, 0));
         assertEquals(1L, comb.getComb(n, 0));
         assertEquals(40L, comb.getComb(n, 1));
         assertEquals(512398157L, comb.getComb(n, n / 2 - 1));

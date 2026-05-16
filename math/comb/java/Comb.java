@@ -46,6 +46,10 @@ class Comb {
     // O(1): コンストラクタで mod を指定していないかつ n が小さい場合
     // O(1): コンストラクタで mod を指定している場合（n の値によらない）
     public long getComb(int n, int r) {
+        if (n < r || Math.min(n, r) < 0) {
+            return 0L;
+        }
+
         if (mod >= 1L) {
             return (((this.fac[n] * this.facInv[r]) % this.mod) * this.facInv[n - r]) % this.mod;
         } else {
