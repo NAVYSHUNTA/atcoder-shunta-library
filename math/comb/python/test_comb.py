@@ -4,11 +4,29 @@
 import unittest
 from comb import Comb
 
-class TestPrime(unittest.TestCase):
+class TestComb(unittest.TestCase):
+    def test_get_comb_invalid_cases_returns_zero(self) -> None:
+        """不正な数値に対するテスト"""
+        n: int = 40
+        mod: int = 998244353
+        comb: Comb = Comb(n)
+        mod_comb: Comb = Comb(n, mod)
+        self.assertEqual(0, comb.get_comb(n, -1))
+        self.assertEqual(0, mod_comb.get_comb(n, -2))
+        self.assertEqual(0, comb.get_comb(-3, -2))
+        self.assertEqual(0, mod_comb.get_comb(-5, -7))
+        self.assertEqual(0, comb.get_comb(-10, n))
+        self.assertEqual(0, mod_comb.get_comb(-8, n))
+        self.assertEqual(0, comb.get_comb(-5, 0))
+        self.assertEqual(0, mod_comb.get_comb(-38, 0))
+        self.assertEqual(0, comb.get_comb(0, -10))
+        self.assertEqual(0, mod_comb.get_comb(0, 29))
+
     def test_calc_comb(self) -> None:
         """組合せの計算テスト"""
         n: int = 40
         comb: Comb = Comb(n)
+        self.assertEqual(1, comb.get_comb(0, 0))
         self.assertEqual(1, comb.get_comb(n, 0))
         self.assertEqual(40, comb.get_comb(n, 1))
         self.assertEqual(131282408400, comb.get_comb(n, n // 2 - 1))
@@ -22,6 +40,7 @@ class TestPrime(unittest.TestCase):
         n: int = 40
         mod: int = 998244353
         comb: Comb = Comb(n, mod)
+        self.assertEqual(1, comb.get_comb(0, 0))
         self.assertEqual(1, comb.get_comb(n, 0))
         self.assertEqual(40, comb.get_comb(n, 1))
         self.assertEqual(512398157, comb.get_comb(n, n // 2 - 1))

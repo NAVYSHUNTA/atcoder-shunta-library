@@ -28,6 +28,9 @@ class Comb:
     # O(1): コンストラクタで mod を指定していないかつ n が小さい場合
     # O(1): コンストラクタで mod を指定している場合（n の値によらない）
     def get_comb(self, n: int, r: int) -> int:
+        if n < r or min(n, r) < 0:
+            return 0
+
         if self.__mod is None:
             return self.__fac[n] // (self.__fac[r] * self.__fac[n - r])
         else:
