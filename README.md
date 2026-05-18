@@ -19,4 +19,4 @@
 |名称|Java|Python|Rust|Ruby|
 |:--|:--|:--|:--|:--|
 |[prime](./math/prime)|[Java](./math/prime/java/Prime.java)|[Python](./math/prime/python/prime.py)|[Rust](./math/prime/rust/src/lib.rs)|[Ruby](./math/prime/ruby/prime.rb)|
-|[comb](./math/comb)|[Java](./math/comb/java/Comb.java)|[Python](./math/comb/python/comb.py)|[Rust](./math/comb/rust/src/lib.rs)||
+|[comb](./math/comb)|[Java](./math/comb/java/Comb.java)|[Python](./math/comb/python/comb.py)|[Rust](./math/comb/rust/src/lib.rs)|[Ruby](./math/comb/ruby/comb.rb)|
