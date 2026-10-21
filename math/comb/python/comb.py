@@ -25,7 +25,7 @@ class Comb:
                 self.__fac_inv[i] = (self.__fac_inv[i - 1] * self.__inv[i]) % mod
 
     # nCr の値を求めるメソッド
-    # O(1): コンストラクタで mod を指定していないかつ n が小さい場合
+    # O(1): コンストラクタで mod を指定しておらず、かつ n が小さい場合
     # O(1): コンストラクタで mod を指定している場合（n の値によらない）
     def get_comb(self, n: int, r: int) -> int:
         if n < r or min(n, r) < 0:

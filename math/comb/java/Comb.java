@@ -43,7 +43,7 @@ class Comb {
     }
 
     // nCr の値を求めるメソッド
-    // O(1): コンストラクタで mod を指定していないかつ n が小さい場合
+    // O(1): コンストラクタで mod を指定しておらず、かつ n が小さい場合
     // O(1): コンストラクタで mod を指定している場合（n の値によらない）
     public long getComb(int n, int r) {
         if (n < r || Math.min(n, r) < 0) {

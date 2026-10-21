@@ -51,7 +51,7 @@ impl Comb {
     }
 
     // nCr の値を求める関数
-    // O(1): コンストラクタで mod_val を指定していないかつ n が小さい場合
+    // O(1): コンストラクタで mod_val を指定しておらず、かつ n が小さい場合
     // O(1): コンストラクタで mod_val を指定している場合（n の値によらない）
     pub fn get_comb(&self, n: i64, r: i64) -> i64 {
         if n < r || n.min(r) < 0 {

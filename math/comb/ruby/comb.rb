@@ -24,7 +24,7 @@ class Comb
   end
 
   # nCr の値を求めるメソッド
-  # O(1): コンストラクタで mod を指定していないかつ n が小さい場合
+  # O(1): コンストラクタで mod を指定しておらず、かつ n が小さい場合
   # O(1): コンストラクタで mod を指定している場合（n の値によらない）
   def get_comb(n, r)
     return 0 if n < r || [n, r].min < 0
