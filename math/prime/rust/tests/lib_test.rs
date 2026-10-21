@@ -14,7 +14,7 @@ fn test_is_prime() {
 
 #[test]
 fn test_is_not_prime() {
-    // 合成数に対する素数判定テスト
+    // 素数でない整数に対する素数判定テスト
     assert_eq!(false, is_prime(0_i8));
     assert_eq!(false, is_prime(1_i32));
     assert_eq!(false, is_prime(4_i64));
@@ -32,7 +32,7 @@ fn test_is_prime_large() {
 
 #[test]
 fn test_is_not_prime_large() {
-    // 大きな合成数に対する素数判定テスト
+    // 素数でない大きな整数に対する素数判定テスト
     assert_eq!(false, is_prime(200560490113_i64));
     assert_eq!(false, is_prime(2005604910109_i128));
     assert_eq!(false, is_prime(92709568269119_i128));

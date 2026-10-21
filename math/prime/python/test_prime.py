@@ -13,7 +13,7 @@ class TestPrime(unittest.TestCase):
         self.assertTrue(is_prime(7))
 
     def test_is_not_prime(self) -> None:
-        """合成数に対する素数判定テスト"""
+        """素数でない整数に対する素数判定テスト"""
         self.assertFalse(is_prime(0))
         self.assertFalse(is_prime(1))
         self.assertFalse(is_prime(4))
@@ -27,7 +27,7 @@ class TestPrime(unittest.TestCase):
         self.assertTrue(is_prime(99999999999973))
 
     def test_is_not_prime_large(self) -> None:
-        """大きな合成数に対する素数判定テスト"""
+        """素数でない大きな整数に対する素数判定テスト"""
         self.assertFalse(is_prime(200560490113))
         self.assertFalse(is_prime(2005604910109))
         self.assertFalse(is_prime(92709568269119))
